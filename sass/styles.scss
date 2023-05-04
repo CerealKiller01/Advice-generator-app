@@ -1,0 +1,28 @@
+/*  AGREGAR NUEVOS COLORES A BOOTSTRAP */
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// Create your own map
+$custom-colors: (
+  "light-cyan": hsl(193, 38%, 86%),
+  "neon-green":hsl(150, 100%, 66%),
+  "grayish-blue":hsl(217, 19%, 38%),
+  "dark-grayish-blue":hsl(217, 19%, 24%),
+  "dark-blue":hsl(218, 23%, 16%)
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import './../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'app';
+
+.contenedor{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
